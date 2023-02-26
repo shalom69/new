@@ -20,8 +20,8 @@ public class CardOrderTest {
     void shouldDisplayRightRequest() {
         open("http://localhost:9999");
         SelenideElement form = $("#root");
-        form.$("[data-test-id='name'] input").setValue("Изя Шниперсон");
-        form.$("[data-test-id='phone'] input").setValue("+79190336222");
+        form.$("[data-test-id='name'] input").setValue("петр петерсон");
+        form.$("[data-test-id='phone'] input").setValue("+79806314388");
         form.$("[data-test-id='agreement']").click();
         form.$("[type='button']").click();
         $("[data-test-id='order-success']").shouldHave(text("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
